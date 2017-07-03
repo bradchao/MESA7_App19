@@ -12,6 +12,9 @@
 		29A54E291F0A1B2C0029FE5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A54E271F0A1B2C0029FE5C /* Main.storyboard */; };
 		29A54E2B1F0A1B2C0029FE5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A54E2A1F0A1B2C0029FE5C /* Assets.xcassets */; };
 		29A54E2E1F0A1B2C0029FE5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A54E2C1F0A1B2C0029FE5C /* LaunchScreen.storyboard */; };
+		29A54E361F0A1B690029FE5C /* gamedata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29A54E351F0A1B690029FE5C /* gamedata.plist */; };
+		29A54E3A1F0A2B490029FE5C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A54E391F0A2B490029FE5C /* libsqlite3.tbd */; };
+		29A54E3D1F0A2DF80029FE5C /* mydb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 29A54E3C1F0A2DE00029FE5C /* mydb.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,10 @@
 		29A54E2A1F0A1B2C0029FE5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29A54E2D1F0A1B2C0029FE5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29A54E2F1F0A1B2C0029FE5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29A54E351F0A1B690029FE5C /* gamedata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gamedata.plist; sourceTree = "<group>"; };
+		29A54E391F0A2B490029FE5C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		29A54E3B1F0A2BB20029FE5C /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bridge.h; path = MyApp19/bridge.h; sourceTree = "<group>"; };
+		29A54E3C1F0A2DE00029FE5C /* mydb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mydb.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A54E3A1F0A2B490029FE5C /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +46,10 @@
 		29A54E171F0A1B2C0029FE5C = {
 			isa = PBXGroup;
 			children = (
+				29A54E3B1F0A2BB20029FE5C /* bridge.h */,
 				29A54E221F0A1B2C0029FE5C /* MyApp19 */,
 				29A54E211F0A1B2C0029FE5C /* Products */,
+				29A54E381F0A2B490029FE5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +64,32 @@
 		29A54E221F0A1B2C0029FE5C /* MyApp19 */ = {
 			isa = PBXGroup;
 			children = (
+				29A54E371F0A1C340029FE5C /* webdata */,
 				29A54E231F0A1B2C0029FE5C /* AppDelegate.swift */,
+				29A54E3C1F0A2DE00029FE5C /* mydb.sqlite */,
 				29A54E251F0A1B2C0029FE5C /* ViewController.swift */,
 				29A54E271F0A1B2C0029FE5C /* Main.storyboard */,
 				29A54E2A1F0A1B2C0029FE5C /* Assets.xcassets */,
 				29A54E2C1F0A1B2C0029FE5C /* LaunchScreen.storyboard */,
 				29A54E2F1F0A1B2C0029FE5C /* Info.plist */,
+				29A54E351F0A1B690029FE5C /* gamedata.plist */,
 			);
 			path = MyApp19;
+			sourceTree = "<group>";
+		};
+		29A54E371F0A1C340029FE5C /* webdata */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = webdata;
+			sourceTree = "<group>";
+		};
+		29A54E381F0A2B490029FE5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29A54E391F0A2B490029FE5C /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +152,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A54E3D1F0A2DF80029FE5C /* mydb.sqlite in Resources */,
+				29A54E361F0A1B690029FE5C /* gamedata.plist in Resources */,
 				29A54E2E1F0A1B2C0029FE5C /* LaunchScreen.storyboard in Resources */,
 				29A54E2B1F0A1B2C0029FE5C /* Assets.xcassets in Resources */,
 				29A54E291F0A1B2C0029FE5C /* Main.storyboard in Resources */,
@@ -268,6 +298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.brad.brad01.MyApp19;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = MyApp19/bridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -281,6 +312,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.brad.brad01.MyApp19;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = MyApp19/bridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
